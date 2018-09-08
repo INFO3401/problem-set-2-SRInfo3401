@@ -1,0 +1,51 @@
+INFO 3401 Problem Set #2 
+By: Steven Rothaus
+
+1. Briefly describe what the following set of commands would achieve. What process would happen and what would be printed to the command line?
+
+cd ~ = change directory to home. This would set the directory to home. Command line would show ~ username$ indicating its at the home directory.
+
+mkdir ./problem_set_1 = Make new directory from directory that i'm in called problem_set_1. Command line goes to next line without error keeping it at ~ username$
+
+touch submission.txt = Make blank file named submission.txt. This would make blank text file called submission. The command line would show no error and move file
+
+cd .. = Change directory to parent directory. This would change from current directory to the parent directory of current. Command line would show going back to previous folder name.
+
+Pwd = Print working directory. The command line would show entire content names in one directory.
+
+
+2. What set of commands would you use to achieve the following: 
+Copy a document called config.txt from your home directory to the root directory. = 
+cp ~/config.txt /
+
+Then, create a new directory in the root called preferences. = 
+mkdir / /preferences
+
+Within preferences, copy prefs.txt from a matching directory called preferences in your home directory. = 
+cp ~/preferences/prefs.txt ~
+
+Finally, determine that the start and end of the config.txt document in both root and home match. =
+head -n 100 ~/config.txt
+tail -n 100 ~/config.txt
+
+head -n 100 /config.txt 
+tail -n 100 /config.txt
+(ensure both info is the same in both outputs)
+
+3. Why do you think it is important to have the following shortcuts for navigating the file structure?
+
+A. Root - Root is important shortcut navigation when beginning to explore entire file structures. It's the top of the top, it has no parent directory.
+
+B. Home - Home is an important shortcut command because it allows you to skip multiple steps of backing out of file locations and gets you directly back to your home file storage instantly. Having quick access to home storage helps improve file search success and ensure organized directory creations.
+
+C. Parent - Parent is important because it easily allows you to take one step back from a files location to determine where its being stored. It almost serves as a back button so you can trace your way to previous storage locations if something.
+
+
+4. Assume all of the directories below are valid directories (e.g., they exist and we have access to them). What would the following print out? 
+
+cd /usrs/INFO3401/../homework/./problem1 pwd = change directory to users go into folder INFO3401 then parent then look at homework directory then locate problem 1 directory. Pwd will print working directory of problem1.
+
+5. You have accidentally moved a file (~/Documents/datafile.csv) to your current directory rather than copying it. 
+What command did you use to do that? = mv ~/Documents/datafile.csv .
+What command should you have used to do that? = cp ~/Documents/datafile.csv .
+What command might you use to undo it? mv ./datafile.csv ~
